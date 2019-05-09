@@ -16,7 +16,7 @@ push:
         username: $OCIR_USERNAME
         password: $OCIR_PASSWORD
         repository: $OCIR_REPOSITORY
-        tag: v1
+        tag: $WERCKER_APPLICATION_NAME_$WERCKER_RUN_ID
         registry: https://$OCIR_REGISTRY/v2
         cmd: java -jar  /pipeline/source/target/medrec-0.0.1-SNAPSHOT.jar
 
