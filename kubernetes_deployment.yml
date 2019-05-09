@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: medrecapi
-        image: $WERCKER_APPLICATION_NAME_$WERCKER_RUN_ID
+        image: $OCIR_REPOSITORY:$WERCKER_APPLICATION_NAME_$WERCKER_RUN_ID
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
