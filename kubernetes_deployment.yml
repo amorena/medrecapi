@@ -12,13 +12,13 @@ spec:
     spec:
       containers:
       - name: medrecapi
-        image: ${OCIR_REGISTRY}/${OCIR_REPOSITORY}:${WERCKER_APPLICATION_NAME}-${WERCKER_GIT_COMMIT}
+        image: registry/repository:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
           protocol: TCP
       imagePullSecrets:
-      - name: ocirsecret  
+      - name: ocirsecretname
       restartPolicy: Always
 ---
 apiVersion: v1
